@@ -11,7 +11,7 @@ export class HeaderComponent implements OnInit {
   collpase ='true';
   //Variable with OUTPUT decorator that will contain the click from the DOM
   //with event binding (click)
-  @Output() onLinkChange = new EventEmitter(); 
+  @Output() feautureSelected = new EventEmitter(); 
 
   constructor() { }
 
@@ -19,9 +19,9 @@ export class HeaderComponent implements OnInit {
   }
 
   //function that will recive the value of the Event Binding
-  onEventNav(val: { target: { text: any; }; }){
+  onSelect(val: { target: { text: any; }; }){
     //EMIT THE VAR: Send variable to be listen from outside Component
-    this.onLinkChange.emit(val.target.text);
+    this.feautureSelected.emit(val.target.text);
   }
 
 }

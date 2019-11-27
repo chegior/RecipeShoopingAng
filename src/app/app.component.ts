@@ -7,9 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app1';
-  selection ='Recipe'
+  loadedFeature ='Recipe'
   
-  selectedLink(linkSel){
-    this.selection = linkSel;
+  onNavigate(feature){
+    //get the VALUE->feature from the HEADER component to use on the HTML
+    //trough Structural Directives *ngIf 
+    this.loadedFeature = feature; 
   }
 }
