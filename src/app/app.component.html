@@ -1,10 +1,10 @@
 
-<app-header></app-header>
+<app-header (onLinkChange) = 'selectedLink($event)'></app-header>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <app-recipes></app-recipes>
-      <app-shooping-list></app-shooping-list>
+      <app-recipes *ngIf="selection==='Recipe'"></app-recipes>
+      <app-shooping-list *ngIf="selection==='Shopping List'"></app-shooping-list>
     </div>
   </div>
 </div>
